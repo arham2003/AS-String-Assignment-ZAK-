@@ -1,0 +1,59 @@
+9.
+MixUp:)
+
+DECLARE a, b, Str3, Str4, Str5 : STRING
+DECLARE Char1, Char2, Char3, Char4 : CHARACTER
+DECLARE n, i : INTEGER
+
+//init
+
+a ← ""
+b ← ""
+Str3 ← ""
+Str4 ← ""
+Str5 ← ""
+Char1 ← ''
+Char2 ← ''
+Char3 ← ''
+Char4 ← ''
+n ← 0
+i← 0
+
+// input
+INPUT a, "Enter string to process: "
+INPUT b, "Enter String to process: "
+
+// Process
+IF LEN(a) >= 2 AND LEN(b) >= 2
+For n ← 1 TO 2
+
+Char1 ← MID(a , n, 1)
+Char2 ← MID(b, n, 1)
+
+Str3 ← Str3 + Char2
+Str4 ← Str4 + Char1
+
+Next
+
+For i ← 3 TO LEN(a)
+    Char3 ← MID(a, i, 1)
+    Str3 ← Str3 + Char3
+Next
+
+For z ← 3 TO LEN(b)
+    Char4 ← MID(Str2, z, 1)
+    Str4 ← Str4 + Char4
+Next
+
+Str5 ← Str5 + Str3 + " " + Str4
+
+//Output
+
+OUTPUT Str5 , "The mixed up string is : "
+
+
+
+
+
+
+						

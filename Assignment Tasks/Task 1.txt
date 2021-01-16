@@ -1,0 +1,71 @@
+1. Find if the input string has all of the alpbhabets; capital or small alike.
+
+//DECLARE
+
+DECLARE Str1 , Str2, Str3 : String
+DECLARE Char1, Char2 : CHARACTER
+DECLARE n, i : INTEGER
+DECLARE isSame1 , isSame2 : BOOLEAN
+
+//Initialisation
+
+Str1 ← ""
+Str2 ← ""
+Str3 ← ""
+Char1 ← ''
+Char2 ← ''
+n←0
+i ← 0
+isSame1 ← TRUE
+
+
+//Input
+
+INPUT Str1, "Enter string to process:"
+
+//Process
+For n ← 1 TO LEN(Str1)
+ Char1 ← MID(Str1 , n , 1)
+ Str2 ← Str2 + Char1
+Next
+
+Str2 ← LOWER(Str2)
+
+IF Str1 <> Str2 THEN isSame1 ← FALSE
+  
+For i ← 1 TO LEN(Str1)
+ Char2 ← MID(Str1 , i , 1)
+ Str3 ← Str3 + Char2
+Next
+
+Str3 ← UPPER(Str3)
+
+
+
+//OUTPUT
+
+IF isSame1 = TRUE THEN
+  OUTPUT Str1 , "string is all small"
+ ELSEIF Str1 <> Str3 THEN
+  OUTPUT Str1 , "string is all capital"
+ ELSEIF isSame1 = FALSE OR Str1 <> Str3 THEN
+  OUTPUT Str1 , "String is not all same."
+Endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

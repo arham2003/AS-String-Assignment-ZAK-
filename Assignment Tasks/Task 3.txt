@@ -1,0 +1,62 @@
+3. Count and output the NUMBER of an entered character. Output separate counts for alphabets (cap & small together), digits and other characters.
+
+
+//Declare
+
+DECLARE Str1 : STRING
+DECLARE Char1, Char2 : CHARACTER
+DECLARE n, i, z, AlphaCount, DigitCount, otherCount : INTEGER
+
+
+//Initialisation
+
+Str1 ← ""
+Char1 ← ''
+Char2 ← ''
+n ← 0
+i ← 0
+z ← 0
+AlphaCount ← 0
+DigitCount ← 0
+otherCount ← 0
+
+//Input
+
+INPUT Str1, "Enter the string to process: "
+
+//Process
+
+Str1 ← UPPER(Str1)
+For n ← 1 TO LEN(Str1)
+Char2 ← MID(Str1 , n,1)
+
+  For i ← 0 TO 25
+     AlphaChar ← CHR(65)
+     Char1 ← AlphaChar + i
+   IF Char1 = Char2 THEN 
+     AlphaCount ← AlphaCount + 1
+   EndIF
+  Next
+  
+  For z ← 0 TO 9
+    DigitChar ← CHR(0)
+    Char3 ← DigitChar + z
+   IF Char 3 = Char2 THEN
+    DigitCount ← DigitCount + 1
+   ENDIF
+  Next
+
+ IF Char2 <> Char1 AND Char2 <> Char3 Then
+    otherCount ← otherCount + 1
+ ENDIF
+
+Next
+ 
+//output
+
+OUTPUT AlphaCount , "Alphabets in string: "
+OUTPUT DigitCount , "Digits in string: "
+OUTPUT otherCount , "Other Character in strings: "
+
+
+

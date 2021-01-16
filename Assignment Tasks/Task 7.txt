@@ -1,0 +1,32 @@
+7) both_ends:
+
+//Declare
+
+DECLARE s, Str2, first2, last2: String
+
+
+
+//INITIALIZE
+
+s ← ""
+Str2 ← ""
+first2 ← ""
+last2 ← ""
+
+
+//Input
+
+INPUT s , "Enter string to process"
+
+//process + output
+
+  IF LEN(s) > 2 THEN
+    first2 ← LEFT(s, 2)
+    last2 ← RIGHT(s, 2)
+    Str2 ← Str2 + first2 + last2
+     OUTPUT Str2
+
+    ELSE
+     OUTPUT s
+   EndIF
+

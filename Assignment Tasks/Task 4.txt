@@ -1,0 +1,50 @@
+4. Find the character that appears most number of times in an entered string and output it.
+
+//Declare
+
+DECLARE Str1 : STRING
+DECLARE Char1, Char2,HighestChar : CHARACTER
+DECLARE n, z, Highest, Counter : INTEGER
+
+// initialise
+
+Str1 ← ""
+Highest ← 0
+Char1 ← ''
+Char2 ← ''
+HighestChar ← ''
+n ← 0
+z ← 0
+Counter ← 0
+
+//input
+
+INPUT Str1, "Enter string to process: "
+
+// Process
+
+
+For n ← 1 TO LEN(Str1)
+Char1 ← MID(Str1 , n, 1)
+
+  For z ← 1 TO LEN(Str1)
+    Char2 ← MID(Str1, z, 1)
+    If Char1 = Char2 Then
+      Counter ← Counter + 1
+    ENDIF
+    If Counter > Highest Then
+     Highest ← Counter
+     HighestChar ← Char2
+  Next
+
+Next
+
+
+//Output
+
+OUTPUT HighestChar + "appears most of the time."
+
+
+
+
+

@@ -1,0 +1,37 @@
+2. Replace selected character with another in entered string.
+
+//Declaration
+DECLARE Str1, Str2 : String
+DECLARE Char1,Char2,Char3 : CHARACTER
+DECLARE n : INTEGER
+
+//Initialisation
+Str1 ← ""
+Str2 ← ""
+Char1 ← ''
+Char2 ← ''
+n ← 0
+
+//Input
+INPUT Str1, "Enter the string to alter: "
+INPUT Char1, "Enter character to alter: "
+INPUT Char2 , "Enter Character to replace with: "
+
+//Process
+For n ← 1 TO LEN(Str1)
+    Char3 ← MID(Str1, n, 1)
+   IF Char1 <> Char3 Then
+    Str2 ← Str2 + Char3
+    ELSEIF Char1 = Char3 Then
+    Str2 ← Str2 + Char2
+   ENDIF
+Next
+
+//OUTPUT
+OUTPUT Str2, "The altered string is : "
+
+
+
+
+
+

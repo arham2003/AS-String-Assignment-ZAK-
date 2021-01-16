@@ -1,0 +1,24 @@
+Task 6) Donuts
+
+//Declare
+
+DECLARE intCount : String
+DECLARE int1 : INTEGER
+
+
+//Initialize
+
+intCount ← 0
+
+
+//Input
+
+INPUT intCount, "enter number of donuts: "
+
+//Output
+
+If intCount < 10 Then
+ OUTPUT "Number of donuts: " + intCount
+ELSE 
+OUTPUT "Number of donuts: " + "Many"
+EndIF

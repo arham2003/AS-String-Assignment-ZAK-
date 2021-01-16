@@ -1,0 +1,57 @@
+8) Fix Start
+
+
+//Declare
+DECLARE Str1 : STRING
+DECLARE cons : CONSTANT
+DECLARE Char1, Char2 : CHARACTER
+DECLARE n : INTEGER
+
+
+//Initialize
+
+Str1 ← ""
+Char1 ← ''
+Char2 ← ''
+cons ← *
+n  ← 0
+
+//input
+
+INPUT Str1 , "Enter string to process: "
+
+//Process
+Char1 ← LEFT(Str1, 1)
+Str2 ← Str2 + Char1
+IF LEN(Str1) >= 2 THEN
+
+ For n ← 2 TO LEN(Str1)
+ Char2 ← MID(Str1, n, 1)
+  If Char2 = Char1 Then
+  Str2 ← Str2 + cons
+  ELSE
+  Str2 ← Str2 + Char2
+  ENDIF
+
+
+ENDIF
+
+//OUTPUT
+OUTPUT Str2, "The Processed String is: "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

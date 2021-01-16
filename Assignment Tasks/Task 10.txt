@@ -1,0 +1,52 @@
+10.
+verbing:)
+
+//declare
+
+DECLARE Str1, Str2, Word1 : STRING
+DECLARE Char2 : CHARACTER
+DECLARE z : INTEGER
+
+//init
+
+Str1 ← ""
+Str2 ← ""
+Word1 ← "ing"
+Char2 ← ''
+z ← 0
+
+// Input
+
+INPUT "Enter String to process: ", Str1
+
+// Process
+
+IF LEN(Str1) >= 3 THEN
+ For z ← 1 TO LEN(Str1)
+   Char2 ← MID(Str1 , i ,1)
+   Str2 ← Str2 + Char2 
+ Next
+
+   
+   IF LOCATE(Str1, Word1) = 0 Then
+    Str2 ← Str2 + "ing"
+    ELSEIF LOCATE(Str1, Word1) > 0 Then
+    Str2 ← Str2 + "ly"
+   ENDIF
+  Next
+
+ENDIF
+
+//Output
+
+IF LEN(Str1) < 3 THEN
+  OUTPUT Str1
+ ELSE
+  OUTPUT Str2
+ENDIF 
+
+
+
+
+
+
